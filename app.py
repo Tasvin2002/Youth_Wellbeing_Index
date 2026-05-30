@@ -62,9 +62,9 @@ st.markdown("""
         background: #534AB7;
         color: white;
         border-radius: 999px;
-        font-size: 0.75rem;
-        font-weight: 700;
-        padding: 5px 16px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        padding: 7px 18px;
         margin-bottom: 0.6rem;
     }
 
@@ -103,7 +103,7 @@ st.markdown("""
         margin-bottom: 0rem;
     }
     .q-hint {
-        font-size: 0.78rem;
+        font-size: 0.68rem;
         color: #9896C8;
         margin-bottom: 0.1rem;
         margin-top: 0;
