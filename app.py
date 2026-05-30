@@ -103,7 +103,7 @@ st.markdown("""
         margin-bottom: 0rem;
     }
     .q-hint {
-        font-size: 0.65rem !important;;
+        font-size: 0.68rem !important;;
         color: #9896C8;
         margin-bottom: 0.1rem;
         margin-top: 0;
