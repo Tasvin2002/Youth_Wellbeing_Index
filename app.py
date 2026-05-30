@@ -47,7 +47,7 @@ st.markdown("""
     }
 
     /* Radio — purple accent */
-    [data-testid="stRadio"] * { accent-color: #534AB7 !important; }
+    [data-testid="stRadio"] * { accent-color:  #312c6d !important; }
 
     /* Section divider */
     .section-divider {
