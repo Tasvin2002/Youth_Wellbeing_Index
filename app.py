@@ -120,10 +120,10 @@ st.markdown("""
         background: #534AB7 !important;
         color: white !important;
         border: none !important;
-        border-radius: 12px !important;
+        border-radius: 11px !important;
         font-size: 1rem !important;
         font-weight: 700 !important;
-        padding: 0.9rem 0 !important;
+        padding: 1.1rem 0 !important;
         width: 100% !important;
         margin-top: 1.5rem;
     }
