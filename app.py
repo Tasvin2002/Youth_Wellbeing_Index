@@ -307,10 +307,10 @@ if step == 0:
         <div class="hero-emoji">🌱</div>
         <div class="hero-title">How are you really doing?</div>
         <div class="hero-body">
-            Answer 12 quick questions about your digital habits and mental health.<br>
-            We'll calculate your personal wellbeing score and give you tailored insights.
+            Answer quick questions about your digital habits and mental health.<br>
+            We'll calculate your personal wellbeing score and give you insights.
         </div>
-        <div class="hero-note">Takes about 2 minutes</div>
+        <div class="hero-note">Takes about 2 minutes - No data stored</div>
     </div>
     <div class="feature-strip">
         <div class="feature-box">
