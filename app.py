@@ -32,11 +32,11 @@ st.markdown('Predict a student\'s wellbeing index based on digital behaviour and
 st.sidebar.header('Student Inputs')
 
 age                     = st.sidebar.slider('Age',                         10, 25, 17)
-gender                  = st.sidebar.selectbox('Gender',                   ['Male', 'Female'])
+gender                  = st.sidebar.selectbox('Gender',                   label_encoders['gender'].classes_.tolist())
 social_media_hours      = st.sidebar.slider('Social Media Hours/Day',      0.0, 12.0, 3.0, 0.1)
 sleep_hours             = st.sidebar.slider('Sleep Hours/Day',             3.0, 12.0, 7.0, 0.1)
 brain_rot_index         = st.sidebar.slider('Brain Rot Index',             0.0, 10.0, 5.0, 0.1)
-late_night_usage        = st.sidebar.selectbox('Late Night Usage',         ['Yes', 'No'])
+late_night_usage        = st.sidebar.selectbox('Late Night Usage',         label_encoders['late_night_usage'].classes_.tolist())
 digital_addiction_score = st.sidebar.slider('Digital Addiction Score',     0.0, 10.0, 5.0, 0.1)
 average_session_length  = st.sidebar.slider('Avg Session Length (mins)',   1.0, 180.0, 30.0, 1.0)
 sessions_per_day        = st.sidebar.slider('Sessions Per Day',            1, 20, 5)
