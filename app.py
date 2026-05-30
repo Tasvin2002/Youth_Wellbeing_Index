@@ -123,7 +123,7 @@ st.markdown("""
         border-radius: 11px !important;
         font-size: 1rem !important;
         font-weight: 700 !important;
-        padding: 1.1rem 0 !important;
+        padding: 0.7rem 0.5 !important;
         width: 100% !important;
         margin-top: 1.5rem;
     }
