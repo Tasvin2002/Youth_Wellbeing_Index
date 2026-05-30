@@ -215,7 +215,7 @@ st.markdown("""
         display: flex;
         justify-content: space-between;
         font-size: 0.73rem;
-        color: #9896C8;
+        color: #484686;
         margin-bottom: 7px;
     }
     .bar-track {
