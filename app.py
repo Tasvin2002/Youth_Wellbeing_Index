@@ -103,8 +103,8 @@ st.markdown("""
         margin-bottom: 0rem;
     }
     .q-hint {
-        font-size: 0.72rem !important;;
-        color: #9896C8;
+        font-size: 0.75rem !important;;
+        color: #484686;
         margin-bottom: 0.1rem;
         margin-top: 0;
     }
@@ -384,7 +384,7 @@ elif step == 2:
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown('<p class="q-label">How long is your average screen session?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">One continuous period of device use(in minutes)</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">One continuous period of device use ( in minutes )</p>', unsafe_allow_html=True)
     average_session_length = st.slider("Session length", 1.0, 180.0, 30.0, 5.0, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
@@ -393,7 +393,7 @@ elif step == 2:
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown('<p class="q-label">How is your ability to focus and concentrate lately?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">0 = sharp and focused &nbsp;&nbsp; 10 = cannot focus on anything</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">0 = Sharp and focused &nbsp;&nbsp; 10 = Cannot focus on anything</p>', unsafe_allow_html=True)
     brain_rot_index = st.slider("Brain rot", 0.0, 10.0, 5.0, 0.5, label_visibility="collapsed")
 
     st.session_state.update({
@@ -416,17 +416,17 @@ elif step == 3:
     st.markdown('<div class="page-sub">This is just for you. Answer as honestly as you can.</div>', unsafe_allow_html=True)
 
     st.markdown('<p class="q-label">How stressed have you been feeling lately?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">0 = completely calm &nbsp;&nbsp; 10 = extremely stressed</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">0 = Completely calm &nbsp;&nbsp; 10 = Extremely stressed</p>', unsafe_allow_html=True)
     stress_level = st.slider("Stress", 0.0, 10.0, 5.0, 0.5, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown('<p class="q-label">How much anxiety have you been experiencing?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">0 = none at all &nbsp;&nbsp; 10 = severe, affecting daily life</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">0 = None at all &nbsp;&nbsp; 10 = Severe</p>', unsafe_allow_html=True)
     anxiety_score = st.slider("Anxiety", 0.0, 10.0, 5.0, 0.5, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown('<p class="q-label">How are you feeling emotionally overall?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">0 = feeling great &nbsp;&nbsp; 10 = feeling very low</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">0 = Feeling great &nbsp;&nbsp; 10 = Feeling very low</p>', unsafe_allow_html=True)
     depression_score = st.slider("Depression", 0.0, 10.0, 5.0, 0.5, label_visibility="collapsed")
 
     st.session_state.update({
