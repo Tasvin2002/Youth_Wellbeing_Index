@@ -23,7 +23,7 @@ st.markdown("""
     #MainMenu, footer, header {visibility: hidden;}
 
     .stApp {
-        background: #EEEDFE;
+        background: #e8e7fe;
     }
 
     .block-container {
@@ -104,7 +104,7 @@ st.markdown("""
     }
     .q-hint {
         font-size: 0.74rem !important;;
-        color: #6b69b0;
+        color: #484686;
         margin-bottom: 0.1rem;
         margin-top: 0;
     }
