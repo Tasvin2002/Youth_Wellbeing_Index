@@ -103,7 +103,7 @@ st.markdown("""
         margin-bottom: 0rem;
     }
     .q-hint {
-        font-size: 0.68rem !important;;
+        font-size: 0.72rem !important;;
         color: #9896C8;
         margin-bottom: 0.1rem;
         margin-top: 0;
@@ -364,27 +364,27 @@ elif step == 1:
 # ════════════════════════════════════════════════════════════
 elif step == 2:
     st.markdown('<div class="prog-wrap"><div class="prog-fill" style="width:66%"></div></div>', unsafe_allow_html=True)
-    st.markdown('<span class="step-pill">Step 2 of 3 — Digital habits</span>', unsafe_allow_html=True)
+    st.markdown('<span class="step-pill">Step 2 of 3 — Digital Habits</span>', unsafe_allow_html=True)
     st.markdown('<div class="page-title">Your digital habits</div>', unsafe_allow_html=True)
     st.markdown('<div class="page-sub">Be honest — there are no wrong answers here.</div>', unsafe_allow_html=True)
 
     st.markdown('<p class="q-label">How many hours do you spend on social media per day?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">Include TikTok, Instagram, YouTube, X, etc.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">Including TikTok, Instagram, YouTube, X, etc.</p>', unsafe_allow_html=True)
     social_media_hours = st.slider("Social media", 0.0, 12.0, 3.0, 0.5, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
-    st.markdown('<p class="q-label">How often do you use your phone late at night (after 11pm)?</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-label">How often do you use your phone late at night?</p>', unsafe_allow_html=True)
     late_night_usage = st.radio("Late night", label_encoders['late_night_usage'].classes_.tolist(),
                                 horizontal=True, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown('<p class="q-label">How addicted do you feel to your devices?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">0 = not at all &nbsp;&nbsp; 10 = cannot put it down</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">0 = Not at all &nbsp;&nbsp; 10 = Cannot put it down</p>', unsafe_allow_html=True)
     digital_addiction_score = st.slider("Addiction", 0.0, 10.0, 5.0, 0.5, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown('<p class="q-label">How long is your average screen session?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">One continuous period of device use, in minutes</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">One continuous period of device use(in minutes)</p>', unsafe_allow_html=True)
     average_session_length = st.slider("Session length", 1.0, 180.0, 30.0, 5.0, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
