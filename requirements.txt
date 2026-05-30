@@ -1,5 +1,8 @@
-tensorflow==2.20.0
-numpy==2.2.6
-pandas==2.3.3
-scikit-learn==1.7.2
-keras==3.7.0
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+joblib
+tensorflow-cpu>=2.16.0
