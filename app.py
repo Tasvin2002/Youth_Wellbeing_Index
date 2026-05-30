@@ -62,9 +62,9 @@ st.markdown("""
         background: #534AB7;
         color: white;
         border-radius: 999px;
-        font-size: 0.90rem;
-        font-weight: 800;
-        padding: 8px 19px;
+        font-size: 1.rem;
+        font-weight: 900;
+        padding: 9px 20px;
         margin-bottom: 0.6rem;
     }
 
@@ -146,7 +146,7 @@ st.markdown("""
     .hero-emoji { font-size: 2.8rem; margin-bottom: 0.6rem; }
     .hero-title { font-size: 1.9rem; font-weight: 900; margin-bottom: 0.6rem; line-height: 1.2; }
     .hero-body  { font-size: 0.95rem; opacity: 0.85; line-height: 1.65; }
-    .hero-note  { font-size: 0.75rem; opacity: 0.5; margin-top: 1.2rem; }
+    .hero-note  { font-size: 0.8rem; opacity: 0.6; margin-top: 1.2rem; }
 
     /* Welcome 3-feature strip */
     .feature-strip {
@@ -164,7 +164,7 @@ st.markdown("""
     }
     .feature-icon { font-size: 1.4rem; margin-bottom: 6px; }
     .feature-name { font-size: 0.82rem; font-weight: 700; color: #26215C; }
-    .feature-desc { font-size: 0.73rem; color: #9896C8; margin-top: 2px; }
+    .feature-desc { font-size: 0.75rem; color: #6b69b0; margin-top: 2px; }
 
     /* Result hero */
     .result-hero {
@@ -310,7 +310,7 @@ if step == 0:
             Answer 12 quick questions about your digital habits and mental health.<br>
             We'll calculate your personal wellbeing score and give you tailored insights.
         </div>
-        <div class="hero-note">Takes about 2 minutes &nbsp;·&nbsp; No data is stored &nbsp;·&nbsp; Powered by AI</div>
+        <div class="hero-note">Takes about 2 minutes</div>
     </div>
     <div class="feature-strip">
         <div class="feature-box">
