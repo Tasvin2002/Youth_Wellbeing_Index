@@ -62,9 +62,9 @@ st.markdown("""
         background: #534AB7;
         color: white;
         border-radius: 999px;
-        font-size: 0.85rem;
+        font-size: 0.90rem;
         font-weight: 800;
-        padding: 7px 18px;
+        padding: 8px 19px;
         margin-bottom: 0.6rem;
     }
 
@@ -103,8 +103,8 @@ st.markdown("""
         margin-bottom: 0rem;
     }
     .q-hint {
-        font-size: 0.75rem !important;;
-        color: #484686;
+        font-size: 0.74rem !important;;
+        color: #6b69b0;
         margin-bottom: 0.1rem;
         margin-top: 0;
     }
@@ -123,7 +123,7 @@ st.markdown("""
         border-radius: 12px !important;
         font-size: 1rem !important;
         font-weight: 700 !important;
-        padding: 0.7rem 0 !important;
+        padding: 0.9rem 0 !important;
         width: 100% !important;
         margin-top: 1.5rem;
     }
