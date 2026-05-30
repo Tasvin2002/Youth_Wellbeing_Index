@@ -59,6 +59,7 @@ st.markdown("""
     /* Step pill */
     .step-pill {
         display: inline-block;
+        padding: 8px 28px;
         background: #534AB7;
         color: white;
         border-radius: 999px;
@@ -103,7 +104,7 @@ st.markdown("""
         margin-bottom: 0rem;
     }
     .q-hint {
-        font-size: 0.78rem;
+        font-size: 0.65rem;
         color: #9896C8;
         margin-bottom: 0.1rem;
         margin-top: 0;
@@ -261,6 +262,8 @@ if 'step' not in st.session_state:
 
 def next_step(): st.session_state.step += 1
 def restart():   st.session_state.step = 0
+def prev_step():
+    st.session_state.step -= 1    
 
 def category(score):
     if score >= 70: return ("Thriving 🌟",        "#0F6E56", "#1D9E75")
@@ -305,12 +308,12 @@ if step == 0:
     st.markdown("""
     <div class="hero-wrap">
         <div class="hero-emoji">🌱</div>
-        <div class="hero-title">How are you really doing?</div>
+        <div class="hero-title">Hello! How are you doing?</div>
         <div class="hero-body">
-            Answer 12 quick questions about your digital habits and mental health.<br>
-            We'll calculate your personal wellbeing score and give you tailored insights.
+            Answer few questions about your digital habits and mental health.<br>
+            We'll calculate your personal wellbeing score and give you insights.
         </div>
-        <div class="hero-note">Takes about 2 minutes &nbsp;·&nbsp; No data is stored &nbsp;·&nbsp; Powered by AI</div>
+        <div class="hero-note">It takes about 2 minutes &nbsp;·&nbsp; No data is stored</div>
     </div>
     <div class="feature-strip">
         <div class="feature-box">
@@ -339,7 +342,6 @@ elif step == 1:
     st.markdown('<div class="prog-wrap"><div class="prog-fill" style="width:33%"></div></div>', unsafe_allow_html=True)
     st.markdown('<span class="step-pill">Step 1 of 3 — About you</span>', unsafe_allow_html=True)
     st.markdown('<div class="page-title">Tell us about yourself</div>', unsafe_allow_html=True)
-    st.markdown('<div class="page-sub">Just a few basics to personalise your results.</div>', unsafe_allow_html=True)
 
     st.markdown('<p class="q-label">How old are you?</p>', unsafe_allow_html=True)
     age = st.slider("Age", 10, 25, 17, label_visibility="collapsed")
@@ -357,6 +359,12 @@ elif step == 1:
     st.session_state['age'] = age
     st.session_state['gender'] = gender
     st.session_state['sleep_hours'] = sleep_hours
+    c1, c2 = st.columns(2)
+
+with c1:
+    st.button("← Back", on_click=restart)
+
+with c2:
     st.button("Next →", on_click=next_step)
 
 # ════════════════════════════════════════════════════════════
@@ -373,13 +381,13 @@ elif step == 2:
     social_media_hours = st.slider("Social media", 0.0, 12.0, 3.0, 0.5, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
-    st.markdown('<p class="q-label">How often do you use your phone late at night (after 11pm)?</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-label">How often do you use your phone late at night?</p>', unsafe_allow_html=True)
     late_night_usage = st.radio("Late night", label_encoders['late_night_usage'].classes_.tolist(),
                                 horizontal=True, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown('<p class="q-label">How addicted do you feel to your devices?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">0 = not at all &nbsp;&nbsp; 10 = cannot put it down</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">0 = Not at all &nbsp;&nbsp; 10 = Cannot put it down</p>', unsafe_allow_html=True)
     digital_addiction_score = st.slider("Addiction", 0.0, 10.0, 5.0, 0.5, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
@@ -393,7 +401,7 @@ elif step == 2:
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown('<p class="q-label">How is your ability to focus and concentrate lately?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">0 = sharp and focused &nbsp;&nbsp; 10 = cannot focus on anything</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">0 = Sharp and focused &nbsp;&nbsp; 10 = Cannot focus on anything</p>', unsafe_allow_html=True)
     brain_rot_index = st.slider("Brain rot", 0.0, 10.0, 5.0, 0.5, label_visibility="collapsed")
 
     st.session_state.update({
@@ -404,6 +412,12 @@ elif step == 2:
         'sessions_per_day':        sessions_per_day,
         'brain_rot_index':         brain_rot_index,
     })
+    c1, c2 = st.columns(2)
+
+with c1:
+    st.button("← Back", on_click=prev_step)
+
+with c2:
     st.button("Next →", on_click=next_step)
 
 # ════════════════════════════════════════════════════════════
@@ -416,17 +430,17 @@ elif step == 3:
     st.markdown('<div class="page-sub">This is just for you. Answer as honestly as you can.</div>', unsafe_allow_html=True)
 
     st.markdown('<p class="q-label">How stressed have you been feeling lately?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">0 = completely calm &nbsp;&nbsp; 10 = extremely stressed</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">0 = Completely calm &nbsp;&nbsp; 10 = Extremely stressed</p>', unsafe_allow_html=True)
     stress_level = st.slider("Stress", 0.0, 10.0, 5.0, 0.5, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown('<p class="q-label">How much anxiety have you been experiencing?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">0 = none at all &nbsp;&nbsp; 10 = severe, affecting daily life</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">0 = None at all &nbsp;&nbsp; 10 = severe, Affecting daily life</p>', unsafe_allow_html=True)
     anxiety_score = st.slider("Anxiety", 0.0, 10.0, 5.0, 0.5, label_visibility="collapsed")
 
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown('<p class="q-label">How are you feeling emotionally overall?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="q-hint">0 = feeling great &nbsp;&nbsp; 10 = feeling very low</p>', unsafe_allow_html=True)
+    st.markdown('<p class="q-hint">0 = Feeling great &nbsp;&nbsp; 10 = Feeling very low</p>', unsafe_allow_html=True)
     depression_score = st.slider("Depression", 0.0, 10.0, 5.0, 0.5, label_visibility="collapsed")
 
     st.session_state.update({
@@ -434,6 +448,12 @@ elif step == 3:
         'anxiety_score':   anxiety_score,
         'depression_score': depression_score,
     })
+    c1, c2 = st.columns(2)
+
+with c1:
+    st.button("← Back", on_click=prev_step)
+
+with c2:
     st.button("See my results →", on_click=next_step)
 
 # ════════════════════════════════════════════════════════════
